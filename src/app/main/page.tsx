@@ -9,7 +9,7 @@ const Home = () => {
     console.log("button Clicked here");
 
     axios
-      .post("http://localhost:3000/api/home", {
+      .post("/api/home", {
         data: inputValue,
       })
       .then((resp) => {
