@@ -4,16 +4,16 @@ import { useState } from "react";
 
 const Home = () => {
   const [inputValue, setInputValue] = useState("");
-
   const handleClick = () => {
     console.log("button Clicked here");
+    console.log(inputValue)
 
     axios
       .post("/api/home", {
         data: inputValue,
       })
       .then((resp) => {
-        alert(JSON.stringify(resp.data.message));
+        alert(JSON.stringify(resp.data));
       })
       .catch((error1) => console.log(error1, "Error received"));
   };
